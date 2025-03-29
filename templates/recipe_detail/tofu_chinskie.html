@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <title>Tofu chińskie</title>
+  </head>
+  <body>
+    <header>
+      <a href="{{ url_for('recipes') }}" class="back-arrow">←</a>
+      <img
+        src="{{ url_for('static', filename='images/ptaki/DD795CD0-28C1-4574-BE4D-C484BB1FB145_1_105_c.jpeg') }}"
+        alt="Pankejksy"
+        class="recipe-header-image"
+      />
+      <h1 class="recipe-title">Tofu chińskie</h1>
+    </header>
+    <article>
+      <p class="recipe-intro">
+        Bardzo wygodna potrawa.
+      </p>
+      <section>
+        <h2>Składniki</h2>
+        <ul>
+          <li>Makaron</li>
+          <li>Kostka tofu</li>
+          <li>Sos sojowy</li>
+          <li>Miód</li>
+          <li>Warzywa (od marchewki po kłącze z brokuła)</li>
+          <li>Imbir</li>
+          <li>Czosnek</li>
+          <li>Ostra papryka</li>
+          <li>Sezam, cytryna i orzeszki ziemne do podania</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Przepis</h2>
+        <ul>
+          <li>Podsmarzyć warzywa na patelni, pod koniec dodać tofu</li>
+          <li>Wrzucić ugotowany makaron i zalać sosem zmieniającym życie.</li>
+          <li>Smarzyć a zgęstnieje</li>
+          <li>Podawać z odpowiednimi dodatkami</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Podaję również inne przepisy na tofu</h2>
+        <ol>
+          <li>
+            <a href="https://www.jadlonomia.com/przepisy/tofu-zmieniajace-zycie/">
+              Tofu zmieniające życie - z dodatkową panierką, która jednak źle się przechowuje.
+            </a>
+          </li>
+          <li>
+            <a href="https://kukbuk.pl/przepisy/tofu-w-sosie-orzechowym/">
+              Orzechowe, dla niektórych ulubione.
+            </a>
+          </li>
+          <li>
+            <a href="https://www.jadlonomia.com/przepisy/tofu-w-sosie-sliwkowym/">
+                Tofu w sosie śliwkowym - z dodatkiem śliwek, które są bardzo dobre.
+            </a>
+          </li>
+        </ol>
+      </section>
+    </article>
+  </body>
+</html>

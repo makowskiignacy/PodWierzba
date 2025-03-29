@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <title>Tort Straciatella</title>
+  </head>
+  <body>
+    <header>
+      <a href="{{ url_for('recipes') }}" class="back-arrow">←</a>
+      <img
+        src="{{ url_for('static', filename='images/6331F689-BC62-4BD5-9969-F1353F534E53_1_105_c.jpeg') }}"
+        alt="Tort Straciatella"
+        class="recipe-header-image"
+      />
+      <h1 class="recipe-title">Tort Straciatella</h1>
+    </header>
+    <article>
+      <p class="recipe-intro">
+        A fancy birthday cake that isn't too sweet, perfect for celebrations.
+      </p>
+      <section>
+        <h2>Ingredients</h2>
+        <ul>
+          <li>Biscuits</li>
+          <li>Chocolate</li>
+          <li>Whipped Cream</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Steps</h2>
+        <ol>
+          <li>Prepare the base...</li>
+          <li>Mix the cream...</li>
+          <li>Decorate and chill...</li>
+        </ol>
+      </section>
+    </article>
+  </body>
+</html>

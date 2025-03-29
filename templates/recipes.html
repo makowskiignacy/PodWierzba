@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <title>Przepisy</title>
+  </head>
+  <body>
+    <h2>Śniadania pod wierzbą</h2>
+    <input type="text" id="search" placeholder="Na co masz dziś ochotę?" onkeyup="filterRecipes()" />
+    
+    <!-- Zakładki do kategorii -->
+    <nav class="recipe-tabs">
+      <button onclick="filterCategory('tofu')">TOFU</button>
+      <button onclick="filterCategory('pasty')">PASTY</button>
+      <button onclick="filterCategory('inne')">INNE</button>
+      <button onclick="filterCategory('')">Wszystkie</button>
+    </nav>
+    
+    <!-- Przepisy -->
+    <div class="recipe-card tofu">
+      <a href="{{ url_for('recipe_detail', recipe_name='tofu-chinskie') }}">
+        <img src="{{ url_for('static', filename='images/ptaki/DD795CD0-28C1-4574-BE4D-C484BB1FB145_1_105_c.jpeg') }}" alt="Tofu duszona" class="recipe-image" />
+        <div class="recipe-details">
+          <h3>Tofu chińskie</h3>
+          <p>Oprócz standardowego tofu mozna tu tez znaleźć linki do innych przepisów.</p>
+        </div>
+      </a>
+    </div>
+    <div class="recipe-card pasty">
+      <a href="{{ url_for('recipe_detail', recipe_name='pasta-z-pomidorami') }}">
+        <img src="{{ url_for('static', filename='images/ptaki/2BFF44D1-9E04-4398-85A9-0F4C207C888D_1_105_c.jpeg') }}" alt="Pasta z pomidorami" class="recipe-image" />
+        <div class="recipe-details">
+          <h3>Makaron w sosie pomidorowym z pulpetami</h3>
+          <p>Aromatyczna pasta z pulpetami z tofu.</p>
+        </div>
+      </a>
+    </div>
+    <div class="recipe-card inne">
+      <a href="{{ url_for('recipe_detail', recipe_name='tarta-warzywniak') }}">
+        <img src="{{ url_for('static', filename='images/tarty/4BC88818-CFDE-4F1B-9E7F-96703AA64854_1_105_c.jpeg') }}" alt="Tarta z warzywami przypruszona fetą" class="recipe-image" />
+        <div class="recipe-details">
+          <h3>Tarta warzywniak z fetą</h3>
+          <p>Wszystko czego dusza zapragnie i jeszcze kilka warzyw więcej</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="recipe-card">
+      <a href="{{ url_for('recipe_detail', recipe_name='tort-straciatella') }}">
+        <img src="{{ url_for('static', filename='images/6331F689-BC62-4BD5-9969-F1353F534E53_1_105_c.jpeg') }}" alt="Tort Straciatella" class="recipe-image" />
+        <div class="recipe-details">
+          <h3>Tort Straciatella</h3>
+          <p>Wybitny urodzinowy tort jak u mamy (u mamy). Taki nie za słodki <3.</p>
+        </div>
+      </a>
+    </div>
+    <div class="recipe-card">
+      <a href="{{ url_for('recipe_detail', recipe_name='kotleciki-jaglane') }}">
+        <img src="{{ url_for('static', filename='images/83268EDE-29DF-4749-A0D1-0FE26D3973DA_1_105_c.jpeg') }}" alt="Kotleciki jaglane" class="recipe-image" />
+        <div class="recipe-details">
+          <h3>Kotleciki jaglane</h3>
+          <p>Dobre, ale czasochłonne danie. Zapisane dla potomnych, najlepiej smakuje z sosem.</p>
+        </div>
+      </a>
+    </div>
+    <div class="recipe-card">
+      <a href="{{ url_for('recipe_detail', recipe_name='pankejksy') }}">
+        <img src="{{ url_for('static', filename='images/FD23DE68-0C17-48FB-9E25-C2D828218378_1_105_c.jpeg') }}" alt="Pankejksy" class="recipe-image" />
+        <div class="recipe-details">
+          <h3>Pankejksy</h3>
+          <p>Jak sama nazwa wskazuje.</p>
+        </div>
+      </a>
+    </div>
+    <script>
+      function filterRecipes() {
+        const query = document.getElementById('search').value.toLowerCase();
+        const cards = document.querySelectorAll('.recipe-card');
+        cards.forEach(card => {
+          const text = card.innerText.toLowerCase();
+          card.style.display = text.includes(query) ? 'flex' : 'none';
+        });
+      }
+
+      function filterCategory(category) {
+        const cards = document.querySelectorAll('.recipe-card');
+        cards.forEach(card => {
+          if (category === '' || card.classList.contains(category)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

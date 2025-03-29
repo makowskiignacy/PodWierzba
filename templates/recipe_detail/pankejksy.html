@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <title>Tort Straciatella</title>
+  </head>
+  <body>
+    <header>
+      <a href="{{ url_for('recipes') }}" class="back-arrow">←</a>
+      <img
+        src="{{ url_for('static', filename='images/FD23DE68-0C17-48FB-9E25-C2D828218378_1_105_c.jpeg') }}"
+        alt="Pankejksy"
+        class="recipe-header-image"
+      />
+      <h1 class="recipe-title">Tort Straciatella</h1>
+    </header>
+    <article>
+      <p class="recipe-intro">
+        Najbardziej lubię te jogurtowe, tylko one wychodzą wystarczająco puszyście.
+      </p>
+      <section>
+        <h2>Składniki</h2>
+        <ul>
+          <li>350g jogurtu</li>
+          <li>2 jajka</li>
+          <li>Trochę masła</li>
+          <li>225g mąki</li>
+          <li>1 łyżeczka sody oczyszczonej</li>
+          <li>1/2 łyżeczki proszku do pieczenia</li>
+          <li>szczypta soli</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Inspiracje</h2>
+        <ol>
+          <li>
+            <a href="https://www.kwestiasmaku.com/przepis/pancakes/">
+              Pancakes
+            </a>
+          </li>
+          <li>
+            <a href="https://www.rozkoszny.pl/najdelikatniejsze-placuszki-bananowe-z-maslano-cynamonowym-miodem/">
+              Placki bananowe
+            </a>
+          </li>
+        </ol>
+      </section>
+    </article>
+  </body>
+</html>

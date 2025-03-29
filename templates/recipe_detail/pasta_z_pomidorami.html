@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <title>Tofuballsy</title>
+  </head>
+  <body>
+    <header>
+      <a href="{{ url_for('recipes') }}" class="back-arrow">←</a>
+      <img
+        src="{{ url_for('static', filename='images/ptaki/2BFF44D1-9E04-4398-85A9-0F4C207C888D_1_105_c.jpeg') }}"
+        alt="zimorodek który nie pasuje do reszty"
+        class="recipe-header-image"
+      />
+      <h1 class="recipe-title">Tofuballsy</h1>
+    </header>
+    <article>
+      <p class="recipe-intro">
+        Kluczek jest tu porządne obsmarzenie kulek oraz przygotowanie jak najbardziej aromatycznego sosu pomidorowego.
+      </p>
+      <section>
+        <h2>Składniki</h2>
+        <ul>
+          <li>Na sos: puszka pomidorów, czosnek, cebula, koncentrat pomidorowy, cukier, zioła prowansalskie</li>
+          <li>Na pulpety: tofu, soy sos, masło orzechowe, czarnuszka, płatki owsiane i drożdżowe</li>
+          <li>Makaron, najlepiej spaghetti</li>
+          <li>Parmezan do podania</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Przepis</h2>
+        <ul>
+          <li>Zmielić płatki owsiane i wymieszać z rozgniecionym tofu i pozostałymi składnikami a następnie usmarzyć</li>
+        </ul>
+      </section>
+    </article>
+  </body>
+</html>

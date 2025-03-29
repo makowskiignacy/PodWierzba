@@ -1,0 +1,239 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f1f7ee; /* light greenish */
+    color: #2e5632; /* dark green text */
+  }
+  a, h1, p {
+    color: #2c5234;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+h2 {
+  font-family: 'Great Vibes', cursive; /* Fancy plant-inspired font */
+  font-size: 3.5rem; /* Larger size */
+  text-align: center;
+  background: linear-gradient(90deg, #2c5234, #72b175, #a3d9a5, #2c5234, #72b175); /* Multi-color gradient */
+  background-size: 200%; /* Larger background for smoother animation */
+  -webkit-background-clip: text; /* Clip the gradient to the text */
+  -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
+  animation: gradient-shift 5s infinite linear; /* Animation for left-to-right effect */
+}
+
+/* Define the gradient-shifting animation */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%; /* Start from the left */
+  }
+  100% {
+    background-position: 100% 50%; /* Move to the right */
+  }
+}
+  button {
+    background-color: #72b175;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #5a8d5b;
+  }
+  .recipe-card {
+    display: flex;
+    align-items: center;   /* Vertically center the image and text */
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 16px 0;
+    padding: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-decoration: none; /* Remove underline for links */
+    color: inherit; /* Inherit text color */
+    transition: transform 0.2s ease; /* Add hover effect */
+  }
+  
+  .recipe-card:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+  }
+  
+  .recipe-image {
+    max-width: 150px; /* Limit image size */
+    max-height: 150px;
+    border-radius: 8px;
+    margin-right: 16px; /* Add space between image and text */
+    flex-shrink: 0; /* Prevent the image from shrinking */
+  }
+  
+  .recipe-details {
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    flex-direction: column; /* Stack text vertically */
+    justify-content: center; /* Center text vertically */
+  }
+  
+  .recipe-details h3 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .recipe-details p {
+    margin: 8px 0 0;
+    font-size: 1rem;
+    color: #555;
+  }
+
+  .recipe-card a {
+    display: flex;          /* Turn the link into a flex container */
+    align-items: center;    /* Vertically align image & text */
+    text-decoration: none;  /* Remove link underline */
+    color: inherit;         /* Inherit text color from parent */
+  }
+  
+  @media (max-width: 600px) {
+    .recipe-card {
+      flex-direction: row; /* Keep image and text side by side */
+      align-items: flex-start; /* Align items at the top */
+    }
+    .recipe-image {
+      margin-right: 16px; /* Ensure spacing remains consistent */
+    }
+  }
+
+  .recipe-header-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .recipe-header-image {
+    display: block;
+    width: 300px;     /* Make image smaller */
+    height: auto;
+    margin: 0 auto;   /* Center the image */
+    border-radius: 8px;
+  }
+  
+  /* Gradient for the recipe title (h1) */
+  .recipe-title {
+    font-family: 'Great Vibes', cursive;
+    text-align: center;
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, #2c5234, #72b175, #a3d9a5, #2c5234, #72b175);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 5s infinite linear;
+  }
+  
+  /* Optional styling for ingredients and steps */
+  article {
+    padding: 0 16px;
+    max-width: 600px;
+    margin: 24px auto;
+  }
+  
+  article h2 {
+    margin-top: 16px;
+    font-size: 1.8rem;
+  }
+  article ul, article ol {
+    margin: 8px 0 16px;
+    padding-left: 20px;
+    list-style: disc;
+  }
+
+  /* Back arrow styling */
+.back-arrow {
+  text-decoration: none;
+  font-size: 2rem;
+  margin: 16px;
+  color: #2c5234;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+.back-arrow:hover {
+  transform: scale(1.2);
+  color: #72b175;
+}
+
+/* Intro styling for each recipe */
+.recipe-intro {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Existing classes (kept for reference) */
+.recipe-header-image {
+  display: block;
+  width: 300px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.recipe-title {
+  font-family: 'Great Vibes', cursive;
+  text-align: center;
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #2c5234, #72b175, #a3d9a5, #2c5234, #72b175);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 5s infinite linear;
+}
+
+#search {
+  margin: 16px auto;
+  display: block;
+  width: 80%;
+  max-width: 400px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  color: #2c5234;
+  border: 2px solid #72b175;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+#search:focus {
+  outline: none;
+  border-color: #a3d9a5;
+}
+
+#search::placeholder {
+  color: #999;
+}
+
+/* Styling for the recipe-tabs navigation */
+.recipe-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px; /* Add spacing between buttons */
+  margin: 16px 0;
+}
+
+.recipe-tabs button {
+  background-color: #72b175; /* Match the green theme */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 20px; /* Rounded buttons */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.recipe-tabs button:hover {
+  background-color: #5a8d5b; /* Darker green on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.recipe-tabs button:active {
+  background-color: #3e6b42; /* Even darker green when clicked */
+  transform: scale(0.95); /* Slight shrink effect */
+}

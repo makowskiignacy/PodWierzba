@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <title>Kotleciki jaglane z Ervegan</title>
+  </head>
+  <body>
+    <header>
+      <!-- Back arrow, consistent with other pages -->
+      <a href="{{ url_for('recipes') }}" class="back-arrow">←</a>
+
+      <!-- Correct alt text for kotleciki jaglane -->
+      <img
+        src="{{ url_for('static', filename='images/83268EDE-29DF-4749-A0D1-0FE26D3973DA_1_105_c.jpeg') }}"
+        alt="Kotleciki jaglane"
+        class="recipe-header-image"
+      />
+
+      <!-- Recipe title with consistent gradient styling -->
+      <h1 class="recipe-title">Kotleciki jaglane z Ervegan</h1>
+    </header>
+
+    <article>
+      <!-- Brief intro matching language & style -->
+      <p class="recipe-intro">
+        Dobre, ale czasochłonne danie. Zapisane dla potomnych, najlepiej smakuje z sosem.
+      </p>
+
+      <!-- Ingredients section in Polish -->
+      <section>
+        <h2>Składniki</h2>
+        <ul>
+          <li>Kasza jaglana</li>
+          <li>Masło orzechowe</li>
+          <li>Pomidory suszone w oleju</li>
+          <li>Ulubione przyprawy</li>
+        </ul>
+      </section>
+
+      <!-- Steps section in Polish -->
+      <section>
+        <h2>Kroki</h2>
+        <ol>
+          <li>Wymieszaj wszystkie składniki.</li>
+          <li>Uformuj kulki.</li>
+          <li>Piecz około 15 min w airfryer lub 30 min w piekarniku.</li>
+        </ol>
+      </section>
+
+      <!-- Reference link: consistent text and styling -->
+      <p style="text-align: center;">
+        <a href="https://ervegan.com/2016/03/jaglane-klopsiki-suszonymi-pomidorami/">
+          Inspiracja z Ervegan
+        </a>
+      </p>
+    </article>
+  </body>
+</html>
